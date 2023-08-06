@@ -1,11 +1,24 @@
+// App.js
 import React from 'react';
-import logo from './logo.svg';
+import Home from './Home';
+import Login from './Login';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  BrowserRouter,
+} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-123
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+
   );
 }
 
